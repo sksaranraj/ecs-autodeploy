@@ -1,0 +1,33 @@
+{
+    "executionRoleArn": "arn:aws:iam::442889374161:role/ecsTaskExecutionRole",
+    "containerDefinitions": [
+        {
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/fargate/service/sample-service",
+                    "awslogs-region": "ap-south-1",
+                    "awslogs-stream-prefix": "fargate"
+                }
+            },
+            "portMappings": [
+                {
+                    "hostPort": 8080,
+                    "protocol": "tcp",
+                    "containerPort": 8080
+                    
+                }
+            ],
+            "image": "442889374161.dkr.ecr.ap-south-1.amazonaws.com/nginx",
+            "name": "sample-service"
+        }
+    ],
+    "memory": "512",
+    "family": "sample-service",
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "networkMode": "awsvpc",
+    "cpu": "256"
+   
+}
