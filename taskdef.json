@@ -19,11 +19,11 @@
                 }
             ],
             "image": "442889374161.dkr.ecr.ap-south-1.amazonaws.com/nginx",
-            "name": "sample-service"
+            "name": "nginx"
         }
     ],
     "memory": "512",
-    "family": "sample-service",
+    "family": "nginx",
     "requiresCompatibilities": [
         "FARGATE"
     ],
